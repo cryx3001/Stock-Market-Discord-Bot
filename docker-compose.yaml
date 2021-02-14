@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  node:
+    build: .
+    links:
+      - db
+    ports:
+      - '8080:8080'
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password1
+    volumes:
+      - './dbSchema.sql:/docker-entrypoint-initdb.d/1.sql'
