@@ -5,34 +5,31 @@ The data is provided by [tradingview](https://www.tradingview.com) through the l
 ## Available commands
 Prefix by default: `sm!`
 ### Basics
-- `help` Gives you the help you need!
-- `init <amount>` The command to get started (0 < `amount` =< 100000)
-- `del` Delete your account from the database <br />
-  (__Warning: Your account will be instantly wiped out from the database without any confirmation!__)
-- `prefix <prefix>` Change my prefix to the choosen one! <br />
-  *Note: Mention me with `prefix` to know my prefix! (@Stock Market prefix)*
-- `ping` To see the latency between you, the bot and the API
-- `about` About the bot
+- `help` Shows the help menu which is this message.
+- `init <amount>` Opens your account.
+(You can specify how much money to start with; Defaults to 100000.)
+- `del` Delete your account from the database. (This action cannot be reversed.)
+- `prefix <prefix>` Change the prefix of the bot.
+- `ping` To see the latency between you, the bot, and the API.
+- `about` Statistics about the bot.
 
-### Player account
-- `balance` / `balance @User` To admire your / user's wealth
-- `list` / `list @User` Your / user's current trades
-- `daily` To get your daily reward
-- `vote` Vote for the bot and get a reward
-- `leaderboard` Who is the richest in your server?
+### Account Info
+- `balance` or `balance @User` To admire your / user's wealth.
+- `list` or `list @User` Your / user's open positions.
+- `daily` To get your daily reward.
+- `vote` Vote for the bot and get a reward.
+- `leaderboard` Who is the richest in your server? (Not working)
 
-### Stock Market
-- `search` To search for stock markets
-- `show <symbol>` To get details about a particular market (ex: `sm!show AAPL`)
-- `newtrade <buy/sell> <symbol> <price> <optional: share/s>` To trade stocks on the market(ex: `sm!newtrade buy AAPL 5000`) <br />
-  &nbsp; ==>`buy` if you think the stock will go up, <br />
-  &nbsp; ==>`sell` if you think the stock will go down. <br />
-  Adding "s" or "share" at the end of the command will specify an amount of shares to buy/sell  <br />
-  (ex: `sm!newtrade buy BTCUSD 1 s` will buy the value of 1 Bitcoin) <br />
-- `closetrade <ID>` (ex: *sm!closetrade 0*) Close a trade (the ID can be found with the list command). Give to you the worth of your trade.
+### Trading
+- `search` Search for tickers and markets that are tradable with the bot.
+- `show <stock>` Get info about a ticker. (ex: sm!show AAPL)
+- `newtrade <buy/sell> <ticker> <price/shares>` Buy/sell tickers.
+(eg: `sm!newtrade buy AAPL 100 share` will buy 100 shares of Apple, `sm!newtrade buy AAPL 100` will buy 100 dollars worth of Apple shares.)
+(When selling / shorting, you gain money as the asset depreciates.)
+- `closetrade <ID>` Closes a trade. The ID can be found with the list command. (ex: sm!ct 0)
 
 ### Available aliases
-Type `help <command>`
+`help <command>` for aliases for that command.
 
 ### Okay, how do I play?
 First, you are going to look for a market. Type `sm!search`, it will redirect you to a website.
