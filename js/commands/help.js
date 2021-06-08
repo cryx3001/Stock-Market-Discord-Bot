@@ -29,12 +29,12 @@ exports.run = (client, msg, args) => {
 				name: 'Basics',
 				value: "- `help` - Shows the help menu which is this message.\n"
 					+ '- `init <amount>` Opens your account.\n'
-					+ '*(You can specify how much money to start with; 0 < `<amount>` =< 100000.)*\n'
+					+ '*(You can specify how much money to start with from between `$0` and `$100,000`, default is 100,000.)*\n'
 					+ '- `del` - Delete your account from the database. (__This action cannot be reversed.__)\n'
 					+ '- `prefix <prefix>` - Change the prefix of the bot. Can be done anytime and an endless amount of times.\n'
 					+ '- `ping` - To see the latency between you, the bot, and the API.\n'
-					+ '- `about` - Statistics about the bot.\n'
-					+ '- `help <command>` - Help and aliases for specified command.\n',
+					+ '- `about` - Statistics of the bot.\n'
+					+ '- `help <command>` - Help and aliases for specified commands.\n',
 			},
 			{
 				name: 'Account Info',
@@ -42,7 +42,7 @@ exports.run = (client, msg, args) => {
 					+ "- `list`/`list @User` - Your/user's open positions.\n"
 					+ '- `daily` - To get your daily reward.\n'
 					+ '- `vote` - Vote for the bot and get a reward.\n'
-					+ '- `leaderboard` - Who is the richest in your server? (Not working)\n',
+					+ '- `leaderboard` - Who is the richest in your server? (Not working - Some users are not shown)\n',
 			},
 			{
 				name: 'Trading',
