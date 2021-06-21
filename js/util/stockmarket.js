@@ -20,11 +20,12 @@ function getStockData(tagArray = [], lookInCache = true) {
 		tagArray.forEach((tag) => {
 			tv.getTicker(tag.toUpperCase(), lookInCache)
 				.then((resp) => {
+					const priceTemp = resp.lp || resp.bid;
 					data.push({
 						status: 1,
 						session: resp.current_session,
 						update: resp.update_mode,
-						price: resp.lp || resp.bid,
+						price: resp.current_session === 'market' ? priceTemp : resp.rtc || priceTemp, // looks dumb
 						symbol: resp.short_name.toUpperCase(),
 						symbol_pro: resp.pro_name.toUpperCase(),
 						name: resp.description,
