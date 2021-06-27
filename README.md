@@ -1,3 +1,7 @@
+# Warning
+This repo is now archived. The bot rewrite will not be publicly available for various reasons.
+This code is still usable, although it is poorly written. <br />
+
 # Stock Market Bot
 
 It is a bot to "play" with the stock market by using fake money! It trades all tickers from TradingView.
